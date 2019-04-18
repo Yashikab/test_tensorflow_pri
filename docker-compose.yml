@@ -1,0 +1,12 @@
+version: '2.3'
+services:
+  test:
+    container_name: 'test_tf_pri'
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+    volumes:
+      - ./project:/root/project
+    command: /bin/bash
+    # continue to run
+    tty: true

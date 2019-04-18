@@ -9,12 +9,11 @@ ADD ./project/requirements.txt /root/project/requirements.txt
 # install required pip packages
 # upgrade pip
 ENV pip /root/.pyenv/shims/pip
-RUN $pip install -r requirements.txt
-
+RUN $pip install -r /root/project/requirements.txt
+RUN $pip install --upgrade tensorflow
 # install tensorflow privacy
 RUN git clone https://github.com/tensorflow/privacy
-RUN cd privacy
-RUN $pip install -e .
+RUN $pip install -e /root/privacy
 
 # set to home directory
 WORKDIR /root/

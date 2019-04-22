@@ -1,5 +1,5 @@
 # Image file gpu
-FROM yashikab/cputensorflow:latest
+FROM yashikab/gputensorflow-privacy:latest
 
 LABEL Yashio Kabashima
 

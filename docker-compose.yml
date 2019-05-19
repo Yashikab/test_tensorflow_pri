@@ -5,6 +5,7 @@ services:
     build:
       context: "./"
       dockerfile: "Dockerfile"
+    runtime: nvidia
     volumes:
       - ./project:/root/project
     command: /bin/bash

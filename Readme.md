@@ -18,7 +18,7 @@ tensorflow-privacyをDocker上で遊んで見る．
     もとイメージのtensorflowバージョンが1.12なので，1.13にする．
 
     ```sh
-    docker-compose build test
+    docker-compose up -d test
     ```
 
 3. testコンテナ実行．
@@ -28,7 +28,7 @@ tensorflow-privacyをDocker上で遊んで見る．
     privacy/tutorial内にあるテストコードの動作は確認済み．
 
     ```sh
-    docker-compose run test
+    docker-compose exec test bash
     ## docker container内で次を実行すると，テストコードが走る．
     python privacy/tutorials/mnist_dpsgd_tutorial.py 
     ```
